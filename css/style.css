@@ -1,0 +1,112 @@
+/* RESETS */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  display: block;
+  outline: none;
+  width: 220px;
+  padding: 0.4em;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+
+  margin: 0;
+}
+
+/* GENERAL STYLING */
+
+.app-title {
+  font-family: "Goblin One", cursive;
+  color: #e1701a;
+}
+
+.title-accent {
+  display: block;
+  color: #f7a440;
+}
+
+.input-label {
+  display: block;
+  text-align: center;
+}
+
+main {
+  font-family: "Raleway", sans-serif;
+}
+
+/* BUTTONS */
+
+.btn {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  border: 0;
+  border: 4px solid #e1701a;
+  background-color: #f7a440;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #f6dcbf;
+  color: black;
+}
+
+/* LAYOUT */
+
+.app-container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+p.cents {
+  width: 50%;
+  background-color: #f7a440;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.7em;
+  color: #fff;
+}
+
+table {
+  width: 50%;
+  margin: 0 auto;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+}
+tr:nth-child(even) {
+  background-color: #f6dcbf;
+}
+tr:nth-child(odd) {
+  background-color: #f7a440;
+}
+th {
+  color: white;
+}
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/converter.js" defer></script>
+    <title>Dollars to cents</title>
+  </head>
+  <body>
+      <div class="app-container">
+        <main>
+            <h1 class="app-title">
+                Dollars2Cents <span class="title-accent">Converter</span>
+                <i class="fas fa-dollar-sign"></i>
+            </h1>
+            <form>
+                <label for="money-amount" class="input-label">Enter amount</label>
+                <input type="text" name="money-amount" maxlength="8" placeholder="enter dollar amount..."></input>
+                <button type="buttons" class="btn">Convert</button>
+            </form>
+            <div class="result-container">
+                <p class="cents">Total cents: 1323</p>
+                <table>
+                    <tbody>
+                        <tr class="tabel-row">
+                            <th>Coins</th>
+                            <th>Count</th>
+                        </tr>
+                        <tr class="tabel-row">
+                            <td class="table-data"><i class="fas fa-coins"></i>Quarters (25 ¢)</td>
+                            <td class="table-data">4939</td>
+                        </tr>
+                        <tr class="tabel-row">
+                            <td class="table-data"><i class="fas fa-coins"></i>Dimes (10 ¢)</td>
+                            <td class="table-data">9</td>
+                        </tr>
+                        <tr class="tabel-row">
+                            <td class="table-data"><i class="fas fa-coins"></i>Nickels (5 ¢)</td>
+                            <td class="table-data">49</td>
+                        </tr>
+                        <tr class="tabel-row">
+                            <td class="table-data"><i class="fas fa-coins"></i>Pennies (1 ¢)</td>
+                            <td class="table-data">4</td>
+                        </tr>
+                    </tbody> 
+                </table>
+            </div>
+        </main>
+    </div>
+  </body>
+</html>
