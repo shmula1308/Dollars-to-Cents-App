@@ -13,6 +13,7 @@ input[type="text"] {
   padding: 0.4em;
   margin: auto;
   margin-bottom: 1.5em;
+  font-size: 1.4rem;
 }
 
 form {
@@ -50,10 +51,6 @@ body {
 
 main {
   font-family: "Raleway", sans-serif;
-}
-
-.result-container {
-  /* display: none; */
 }
 
 /* BUTTONS */

@@ -4,12 +4,15 @@ const input = document.querySelector('input[type="text"]');
 const resultContainer = document.querySelector('.result-container');
 const displayAlert = document.querySelector('alert');
 
+
 document.addEventListener('DOMContentLoaded', () => {
     convertBtn.addEventListener('click', (ev) => {
     ev.preventDefault()
-    if(validateInput(input.value)) {
+  // If input is a number with only two decimal points, convert dollarsToCents
+    if(validateInput(input.value)) { 
         dollarToCents(input.value)
     } else {
+  //If input is invalid alert user
         resultContainer.innerHTML = ' <p class="alert">Incorrect value</p>'
         return;
     }
@@ -19,27 +22,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const validateInput = (str) => {
     let length;
+    //if input is not a number return false
     if(isNaN(str)) {
         return false;
     } 
+    //check if input is a floating point number, if it is get the number of decimal points
     if(str.includes('.')) {
         length = str.split('.')[1].length 
     }
+    //If number of decimal points is bigger than two return false
     if(length>2) {
         return false;
     }
+    //in all other cases return true
     return true;
 }
 
 const dollarToCents = (dollars) => {
-    let cents = Number(dollars) * 100; //get cents
+    let cents = Math.floor(Number(dollars) * 100); //get cents. Round the number
     let quarters = Math.floor(cents / 25); //get quarters
     let remainder = cents%25; //get reaminder after getting quarters
-    let dimes,temp,nickels,pennies;
+    let dimes,temp,nickels,pennies; 
     if(remainder >= 10) {
         dimes = Math.floor(remainder/10);
         temp = remainder % 10;
-        console.log('temp',temp,dimes)
       }
       
       if(temp >= 5) {
