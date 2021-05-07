@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const validateInput = (str) => {
     let length;
+
+    if(Number(str) < 0) {
+        return false;
+    }
     //if input is not a number return false
     if(isNaN(str)) {
         return false;
@@ -39,7 +43,7 @@ const validateInput = (str) => {
 }
 
 const dollarToCents = (dollars) => {
-    let cents = Math.floor(Number(dollars) * 100); //get cents. Round the number
+    let cents = Math.round(Number(dollars) * 100); //get cents. Round the number
     let quarters = Math.floor(cents / 25); //get quarters
     let remainder = cents%25; //get reaminder after getting quarters
     let dimes,temp,nickels,pennies; 
@@ -70,7 +74,10 @@ const dollarToCents = (dollars) => {
         dimes = 0;
         nickels = 0;
       }
+
+      //clear table before adding new result
       resultContainer.innerHTML = "";
+      
       resultContainer.innerHTML = `
       <p class="cents">Total cents: ${cents}</p>
       <table>
